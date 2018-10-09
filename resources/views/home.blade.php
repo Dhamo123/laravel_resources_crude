@@ -3,6 +3,9 @@
 @section('content')
 
       <div class="container">
+      @if (session('status'))
+     <p>{{ session('status') }}</p>
+@endif 
         <a href="product">
           <button type="button" class="btn btn-primary pull-right">ADD</button></a>
         <table class="datatable mdl-data-table dataTable" cellspacing="0"

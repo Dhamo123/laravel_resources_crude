@@ -75,7 +75,7 @@ class ProductController extends Controller
       }
       
       
-      return redirect('/home');
+      return redirect('/home')->with('status','Product added successfully..!');
       //dd($data);
         //
     }
@@ -137,7 +137,7 @@ class ProductController extends Controller
           $file->move($destinationPath,$photo->photo);
         }
        
-       return redirect('/home');
+       return redirect('/home')->with('status', 'Product updated successfully');
 
     }
 
